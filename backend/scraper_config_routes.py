@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from datetime import datetime
-from backend.db import get_db_connection
+from db import get_db_connection
 from bs4 import BeautifulSoup, Tag
 import requests
 import re
