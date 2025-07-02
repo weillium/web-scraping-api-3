@@ -23,7 +23,7 @@ def list_scraper_configs():
 def get_scraper_config(scraper_config_id):
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM scraper_config WHERE scraper_config_id = ?', (scraper_config_id,))
+    cursor.execute('SELECT * FROM scraper_config WHERE scraper_config_id = %s', (scraper_config_id,))
     config = cursor.fetchone()
     conn.close()
     if config is None:
@@ -40,7 +40,7 @@ def create_scraper_config():
     conn = get_db_connection()
     cursor = conn.cursor()
     cursor.execute(
-        'INSERT INTO scraper_config (trim_input, group_row_count, created_on, last_updated_on) VALUES (?, ?, ?, ?)',
+        'INSERT INTO scraper_config (trim_input, group_row_count, created_on, last_updated_on) VALUES (%s, %s, %s, %s)',
         (trim_input, group_row_count, created_on, None)
     )
     conn.commit()
@@ -57,13 +57,13 @@ def update_scraper_config(scraper_config_id):
 
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM scraper_config WHERE scraper_config_id = ?', (scraper_config_id,))
+    cursor.execute('SELECT * FROM scraper_config WHERE scraper_config_id = %s', (scraper_config_id,))
     if cursor.fetchone() is None:
         conn.close()
         return jsonify({'error': 'Scraper config not found'}), 404
 
     cursor.execute(
-        'UPDATE scraper_config SET trim_input = ?, group_row_count = ?, last_updated_on = ? WHERE scraper_config_id = ?',
+        'UPDATE scraper_config SET trim_input = %s, group_row_count = %s, last_updated_on = %s WHERE scraper_config_id = %s',
         (trim_input, group_row_count, last_updated_on, scraper_config_id)
     )
     conn.commit()
@@ -74,12 +74,12 @@ def update_scraper_config(scraper_config_id):
 def delete_scraper_config(scraper_config_id):
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM scraper_config WHERE scraper_config_id = ?', (scraper_config_id,))
+    cursor.execute('SELECT * FROM scraper_config WHERE scraper_config_id = %s', (scraper_config_id,))
     if cursor.fetchone() is None:
         conn.close()
         return jsonify({'error': 'Scraper config not found'}), 404
 
-    cursor.execute('DELETE FROM scraper_config WHERE scraper_config_id = ?', (scraper_config_id,))
+    cursor.execute('DELETE FROM scraper_config WHERE scraper_config_id = %s', (scraper_config_id,))
     conn.commit()
     conn.close()
     return jsonify({'message': 'Scraper config deleted'})
@@ -90,7 +90,7 @@ def delete_scraper_config(scraper_config_id):
 def list_row_labels(scraper_config_id):
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM scraper_config_row_labels WHERE scraper_config_id = ?', (scraper_config_id,))
+    cursor.execute('SELECT * FROM scraper_config_row_labels WHERE scraper_config_id = %s', (scraper_config_id,))
     row_labels = cursor.fetchall()
     conn.close()
     return jsonify([dict(row_label) for row_label in row_labels])
@@ -99,7 +99,7 @@ def list_row_labels(scraper_config_id):
 def get_row_label(row_label_id):
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM scraper_config_row_labels WHERE scraper_config_row_label_id = ?', (row_label_id,))
+    cursor.execute('SELECT * FROM scraper_config_row_labels WHERE scraper_config_row_label_id = %s', (row_label_id,))
     row_label = cursor.fetchone()
     conn.close()
     if row_label is None:
@@ -130,7 +130,7 @@ def create_row_label(scraper_config_id):
 
     for row_order, row_label in zip(row_orders, row_labels):
         cursor.execute(
-            'INSERT INTO scraper_config_row_labels (scraper_config_id, row_order, row_label, created_on, last_updated_on) VALUES (?, ?, ?, ?, ?)',
+            'INSERT INTO scraper_config_row_labels (scraper_config_id, row_order, row_label, created_on, last_updated_on) VALUES (%s, %s, %s, %s, %s)',
             (scraper_config_id, row_order, row_label, created_on, last_updated_on)
         )
 
@@ -147,13 +147,13 @@ def update_row_label(row_label_id):
 
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM scraper_config_row_labels WHERE scraper_config_row_label_id = ?', (row_label_id,))
+    cursor.execute('SELECT * FROM scraper_config_row_labels WHERE scraper_config_row_label_id = %s', (row_label_id,))
     if cursor.fetchone() is None:
         conn.close()
         return jsonify({'error': 'Row label not found'}), 404
 
     cursor.execute(
-        'UPDATE scraper_config_row_labels SET row_order = ?, row_label = ?, last_updated_on = ? WHERE scraper_config_row_label_id = ?',
+        'UPDATE scraper_config_row_labels SET row_order = %s, row_label = %s, last_updated_on = %s WHERE scraper_config_row_label_id = %s',
         (row_order, row_label, last_updated_on, row_label_id)
     )
     conn.commit()
@@ -164,12 +164,12 @@ def update_row_label(row_label_id):
 def delete_row_label(row_label_id):
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM scraper_config_row_labels WHERE scraper_config_row_label_id = ?', (row_label_id,))
+    cursor.execute('SELECT * FROM scraper_config_row_labels WHERE scraper_config_row_label_id = %s', (row_label_id,))
     if cursor.fetchone() is None:
         conn.close()
         return jsonify({'error': 'Row label not found'}), 404
 
-    cursor.execute('DELETE FROM scraper_config_row_labels WHERE scraper_config_row_label_id = ?', (row_label_id,))
+    cursor.execute('DELETE FROM scraper_config_row_labels WHERE scraper_config_row_label_id = %s', (row_label_id,))
     conn.commit()
     conn.close()
     return jsonify({'message': 'Row label deleted'})
@@ -178,7 +178,7 @@ def delete_row_label(row_label_id):
 def delete_all_tags(scraper_config_id):
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('DELETE FROM scraper_config_tags WHERE scraper_config_id = ?', (scraper_config_id,))
+    cursor.execute('DELETE FROM scraper_config_tags WHERE scraper_config_id = %s', (scraper_config_id,))
     conn.commit()
     conn.close()
     return jsonify({'message': 'All tags deleted'})
@@ -187,7 +187,7 @@ def delete_all_tags(scraper_config_id):
 def delete_all_row_labels(scraper_config_id):
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('DELETE FROM scraper_config_row_labels WHERE scraper_config_id = ?', (scraper_config_id,))
+    cursor.execute('DELETE FROM scraper_config_row_labels WHERE scraper_config_id = %s', (scraper_config_id,))
     conn.commit()
     conn.close()
     return jsonify({'message': 'All row labels deleted'})
@@ -200,7 +200,7 @@ def list_tags(scraper_config_id):
     cursor = conn.cursor()
 
     # Fetch tags for the scraper config
-    cursor.execute('SELECT * FROM scraper_config_tags WHERE scraper_config_id = ?', (scraper_config_id,))
+    cursor.execute('SELECT * FROM scraper_config_tags WHERE scraper_config_id = %s', (scraper_config_id,))
     tags = cursor.fetchall()
 
     conn.close()
@@ -211,7 +211,7 @@ def list_tags(scraper_config_id):
 def get_tag(tag_id):
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM scraper_config_tags WHERE scraper_config_tag_id = ?', (tag_id,))
+    cursor.execute('SELECT * FROM scraper_config_tags WHERE scraper_config_tag_id = %s', (tag_id,))
     tag = cursor.fetchone()
     conn.close()
     if tag is None:
@@ -236,7 +236,7 @@ def create_tag(scraper_config_id):
 
     for tag in tags:
         cursor.execute(
-            'INSERT INTO scraper_config_tags (scraper_config_id, tag, created_on, last_updated_on) VALUES (?, ?, ?, ?)',
+            'INSERT INTO scraper_config_tags (scraper_config_id, tag, created_on, last_updated_on) VALUES (%s, %s, %s, %s)',
             (scraper_config_id, tag, created_on, last_updated_on)
         )
 
@@ -252,13 +252,13 @@ def update_tag(tag_id):
 
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM scraper_config_tags WHERE scraper_config_tag_id = ?', (tag_id,))
+    cursor.execute('SELECT * FROM scraper_config_tags WHERE scraper_config_tag_id = %s', (tag_id,))
     if cursor.fetchone() is None:
         conn.close()
         return jsonify({'error': 'tag not found'}), 404
 
     cursor.execute(
-        'UPDATE scraper_config_tags SET tag = ?, last_updated_on = ? WHERE scraper_config_tag_id = ?',
+        'UPDATE scraper_config_tags SET tag = %s, last_updated_on = %s WHERE scraper_config_tag_id = %s',
         (tag, last_updated_on, tag_id)
     )
     conn.commit()
@@ -269,12 +269,12 @@ def update_tag(tag_id):
 def delete_tag(tag_id):
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM scraper_config_tags WHERE scraper_config_tag_id = ?', (tag_id,))
+    cursor.execute('SELECT * FROM scraper_config_tags WHERE scraper_config_tag_id = %s', (tag_id,))
     if cursor.fetchone() is None:
         conn.close()
         return jsonify({'error': 'tag not found'}), 404
 
-    cursor.execute('DELETE FROM scraper_config_tags WHERE scraper_config_tag_id = ?', (tag_id,))
+    cursor.execute('DELETE FROM scraper_config_tags WHERE scraper_config_tag_id = %s', (tag_id,))
     conn.commit()
     conn.close()
     return jsonify({'message': 'tag deleted'})
