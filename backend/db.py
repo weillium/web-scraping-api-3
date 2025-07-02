@@ -1,4 +1,6 @@
 import os
+import json
+import boto3
 import psycopg2
 from psycopg2.extras import RealDictCursor
 from flask import g
@@ -8,7 +10,25 @@ RDS_HOST = os.environ.get('RDS_HOST')
 RDS_PORT = os.environ.get('RDS_PORT', 5432)
 RDS_DBNAME = os.environ.get('RDS_DBNAME')
 RDS_USER = os.environ.get('RDS_USER')
-RDS_PASSWORD = os.environ.get('RDS_PASSWORD')
+RDS_SECRET_ARN = os.environ.get('RDS_SECRET_ARN')
+
+
+# Function to get secret from AWS Secrets Manager
+
+def get_secret():
+    if not RDS_SECRET_ARN:
+        return None
+    client = boto3.client('secretsmanager', region_name='us-west-1')
+    response = client.get_secret_value(SecretId=RDS_SECRET_ARN)
+    secret_string = response.get('SecretString')
+    if secret_string:
+        secret = json.loads(secret_string)
+        return secret.get('password')
+    return None
+
+
+# Get password from Secrets Manager
+RDS_PASSWORD = get_secret()
 
 
 def get_db_connection():
