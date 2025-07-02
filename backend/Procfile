@@ -1,1 +1,1 @@
-web: gunicorn application:app --bind 0.0.0.0:8000 --pid /var/pids/web.pid --log-file /var/log/gunicorn.log
+web: gunicorn application:app --bind 0.0.0.0:8000 --pid /var/pids/web.pid --access-logfile - --error-logfile -
