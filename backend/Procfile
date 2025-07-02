@@ -1,1 +1,1 @@
-web: gunicorn application:app --bind 0.0.0.0:8000 --pid /var/pids/web.pid
+web: cd /var/app/current && gunicorn application:app --bind 0.0.0.0:8000 --pid /var/pids/web.pid
