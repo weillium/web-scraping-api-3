@@ -1,0 +1,15 @@
+.elasticbeanstalk
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+build/
+node_modules/
+*.log
+*.sqlite3
+*.db
+.DS_Store
