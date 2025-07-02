@@ -1,0 +1,173 @@
+# Logfile created on 2025-07-01 21:45:56 +0000 by logger.rb/v1.6.6
+A, [2025-07-01T21:45:57.059145 #2057]   ANY -- : healthd daemon 1.0.7 initialized
+W, [2025-07-01T21:45:57.132148 #2057]  WARN -- : log file "/var/log/nginx/healthd/application.log.2025-07-01-21" does not exist
+F, [2025-07-01T21:47:55.950474 #2057] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-01T21:47:58.327436 #2515]   ANY -- : healthd daemon 1.0.7 initialized
+W, [2025-07-01T21:48:08.502894 #2515]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {id: "0", namespace: "application", timestamp: 1751406390, data: "{\"duration\":10,\"latency_histogram\":[[0.0,1]],\"http_counters\":{\"status_502\":1,\"request_count\":1}}"}
+F, [2025-07-01T21:52:31.310937 #2515] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-01T21:52:33.777905 #3246]   ANY -- : healthd daemon 1.0.7 initialized
+W, [2025-07-01T21:52:43.907733 #3246]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {id: "0", namespace: "application", timestamp: 1751406670, data: "{\"duration\":10,\"latency_histogram\":[[0.0,1]],\"http_counters\":{\"status_502\":1,\"request_count\":1}}"}
+F, [2025-07-01T21:55:30.573892 #3246] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-01T21:55:32.965864 #3880]   ANY -- : healthd daemon 1.0.7 initialized
+W, [2025-07-01T21:55:43.088544 #3880]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {id: "0", namespace: "application", timestamp: 1751406850, data: "{\"duration\":10,\"latency_histogram\":[[0.0,1]],\"http_counters\":{\"status_502\":1,\"request_count\":1}}"}
+F, [2025-07-01T21:58:19.011445 #3880] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-01T21:58:21.448237 #4511]   ANY -- : healthd daemon 1.0.7 initialized
+W, [2025-07-01T21:58:31.541182 #4511]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {id: "0", namespace: "application", timestamp: 1751407020, data: "{\"duration\":10,\"latency_histogram\":[[0.0,1]],\"http_counters\":{\"status_502\":1,\"request_count\":1}}"}
+F, [2025-07-01T22:03:41.011645 #4511] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-01T22:03:43.297069 #5378]   ANY -- : healthd daemon 1.0.7 initialized
+W, [2025-07-01T22:03:53.428460 #5378]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {id: "0", namespace: "application", timestamp: 1751407340, data: "{\"duration\":10,\"latency_histogram\":[[0.0,1],[0.001,1]],\"http_counters\":{\"status_502\":2,\"request_count\":2}}"}
+W, [2025-07-01T23:00:01.701604 #5378]  WARN -- : log file "/var/log/nginx/healthd/application.log.2025-07-01-23" does not exist
+W, [2025-07-02T00:00:02.435963 #5378]  WARN -- : log file "/var/log/nginx/healthd/application.log.2025-07-02-00" does not exist
+F, [2025-07-02T00:27:14.471813 #5378] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-02T00:27:16.909507 #11270]   ANY -- : healthd daemon 1.0.7 initialized
+F, [2025-07-02T00:33:31.355166 #11270] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-02T00:33:33.864744 #12043]   ANY -- : healthd daemon 1.0.7 initialized
+W, [2025-07-02T00:33:44.010541 #12043]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {id: "0", namespace: "application", timestamp: 1751416330, data: "{\"duration\":10,\"latency_histogram\":[[0.0,2]],\"http_counters\":{\"status_502\":2,\"request_count\":2}}"}
+F, [2025-07-02T00:35:48.848906 #12043] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-02T00:35:51.079808 #12654]   ANY -- : healthd daemon 1.0.7 initialized
+W, [2025-07-02T00:36:01.294698 #12654]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {id: "0", namespace: "application", timestamp: 1751416470, data: "{\"duration\":10,\"latency_histogram\":[[0.0,1],[0.001,1]],\"http_counters\":{\"status_502\":2,\"request_count\":2}}"}
+F, [2025-07-02T00:38:54.466708 #12654] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-02T00:38:56.594151 #13268]   ANY -- : healthd daemon 1.0.7 initialized
+W, [2025-07-02T00:39:06.675304 #13268]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {id: "0", namespace: "application", timestamp: 1751416650, data: "{\"duration\":10,\"latency_histogram\":[[0.0,1],[0.001,1]],\"http_counters\":{\"status_502\":2,\"request_count\":2}}"}
+F, [2025-07-02T00:52:59.197205 #13268] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-02T00:53:01.820117 #14247]   ANY -- : healthd daemon 1.0.7 initialized
+W, [2025-07-02T00:53:11.902264 #14247]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {id: "0", namespace: "application", timestamp: 1751417500, data: "{\"duration\":10,\"latency_histogram\":[[0.0,1],[0.001,1]],\"http_counters\":{\"status_502\":2,\"request_count\":2}}"}
+F, [2025-07-02T00:57:28.413454 #14247] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-02T00:57:30.706427 #14905]   ANY -- : healthd daemon 1.0.7 initialized
+W, [2025-07-02T00:57:40.780126 #14905]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {id: "0", namespace: "application", timestamp: 1751417770, data: "{\"duration\":10,\"latency_histogram\":[[0.0,2]],\"http_counters\":{\"status_502\":2,\"request_count\":2}}"}
+W, [2025-07-02T01:00:00.384938 #14905]  WARN -- : log file "/var/log/nginx/healthd/application.log.2025-07-02-01" does not exist
+W, [2025-07-02T01:00:05.385420 #14905]  WARN -- : log file "/var/log/nginx/healthd/application.log.2025-07-02-01" does not exist
+F, [2025-07-02T01:00:49.232678 #14905] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-02T01:00:51.445023 #15589]   ANY -- : healthd daemon 1.0.7 initialized
+F, [2025-07-02T01:08:45.590369 #15589] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-02T01:08:47.814550 #16418]   ANY -- : healthd daemon 1.0.7 initialized
+W, [2025-07-02T01:08:57.892099 #16418]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {id: "0", namespace: "application", timestamp: 1751418440, data: "{\"duration\":10,\"latency_histogram\":[[0.0,1]],\"http_counters\":{\"status_502\":1,\"request_count\":1}}"}
+F, [2025-07-02T01:19:17.052017 #16418] FATAL -- : /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:447:in 'block in Puma::Launcher#setup_signals': SIGTERM (SignalException)
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Thread#join'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:63:in 'Puma::Single#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/cli.rb:75:in 'Puma::CLI#run'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:112:in 'block in <top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in 'Dir.chdir'
+	from /opt/elasticbeanstalk/lib/ruby/lib/ruby/gems/3.4.0/gems/healthd-1.0.7/bin/healthd:19:in '<top (required)>'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in 'Kernel#load'
+	from /opt/elasticbeanstalk/lib/ruby/bin/healthd:25:in '<main>'
+A, [2025-07-02T01:19:19.291345 #17307]   ANY -- : healthd daemon 1.0.7 initialized
+W, [2025-07-02T01:19:29.370679 #17307]  WARN -- : discarding statistic item after validation error (Invalid timestamp): {id: "0", namespace: "application", timestamp: 1751419070, data: "{\"duration\":10,\"latency_histogram\":[[0.001,1]],\"http_counters\":{\"status_404\":1,\"request_count\":1}}"}
