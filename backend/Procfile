@@ -1,1 +1,1 @@
-web: gunicorn --chdir /var/app/current application:app --bind 0.0.0.0:8000 --pid /var/pids/web.pid
+web: sh -c "pwd && ls -l && gunicorn application:app --bind 0.0.0.0:8000 --pid /var/pids/web.pid"
